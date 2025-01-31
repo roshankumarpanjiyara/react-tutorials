@@ -1,4 +1,4 @@
-import { useState } from "react"; //react hooks
+import { useState, Fragment } from "react"; //react hooks
 
 import componentImg from "./assets/components.png";
 import { CORE_CONCEPTS } from "./data.js";
@@ -16,7 +16,8 @@ function App() {
     console.log(selectedTopic);
   }
   return (
-    <div>
+    // alternative to unnecessary div also can use empty tag <> </>
+    <Fragment>
       <Header></Header>
       <main>
         <section id="core-concepts">
@@ -87,7 +88,7 @@ function App() {
           )}
         </section>
       </main>
-    </div>
+    </Fragment>
   );
 }
 
