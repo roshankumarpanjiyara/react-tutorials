@@ -7,6 +7,9 @@ function Player(props) {
   function handleEditClick() {
     setIsEditing((editing) => !editing);
     console.log(isEditing);
+    if(isEditing){
+      props.onChangeName(props.symbol, playerName);
+    }
   }
 
   function handleNameChange(event){
