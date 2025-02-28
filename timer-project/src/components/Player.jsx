@@ -4,7 +4,7 @@ import { useRef } from "react";
 export default function Player() {
   const playerName = useRef();
 
-  const [enteredPlayerName, setEnteredPlayerName] = useState("");
+  const [enteredPlayerName, setEnteredPlayerName] = useState(null);
   // const [submitted, setSubmitted] = useState(false);
 
   // function handleChange(event) {
@@ -14,6 +14,7 @@ export default function Player() {
 
   function handleClick() {
     setEnteredPlayerName(playerName.current.value);
+    playerName.current.value = "";
     // setSubmitted(true);
   }
 
